@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAT BOLL STUMP Game</title>
+    <style>
+        /* Reset margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global body styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #121212;
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+
+            margin: 0;
+        }
+
+        /* Main game container */
+        .game-container {
+            background: linear-gradient(135deg, #222, #333);
+            border-radius: 20px;
+            width: 90%;
+            /* height: 600px; */
+            max-width: 800px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            text-align: center;
+        }
+
+        /* Heading styles */
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            color: #ffdf00;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation bar (scores and match type) */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+            color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        nav big {
+            text-transform: uppercase;
+            color: #ffbf00;
+            text-decoration: underline;
+        }
+
+        /* Game action buttons */
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.4em;
+            border: 2px solid #ffbf00;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background-color: #ffbf00;
+            color: #333;
+            transform: translateY(-4px);
+        }
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+        /* Result display styling */
+        #result, #result1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffbf00;
+            margin-top: 30px;
+        }
+
+        /* Horizontal rule for separation */
+        hr {
+            border-color: rgba(255, 255, 255, 0.2);
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        /* Footer styling */
+        footer {
+            font-size: 1em;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        /* Buttons for clearing and resetting */
+        #clear-btn, #reset-btn {
+            background-color: #444;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            border: none;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        #clear-btn:hover, #reset-btn:hover {
+            background-color: #ff5722;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .game-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.2em;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main game container -->
+    <div class="game-container">
+        <h1>BAT BOLL STUMP Game</h1>
+
+        <!-- Navigation bar (Scores and Match Type) -->
+        <nav>
+            <big id="userwin"><u>User</u> :</big>
+            <big id="camp"><u>Computer</u> :</big>
+            <big id="tye"><u>Match Type</u> :</big>
+        </nav>
+
+        <!-- Action buttons for the game -->
+        <div>
+            <button onclick="B();">Bat</button>
+            <button onclick="Ball();">Ball</button>
+            <button onclick="stump();">Stump</button>
+        </div>
+
+        <!-- Clear and Reset buttons -->
+        <hr>
+        <div>
+            <button id="clear-btn" onclick="console.clear()">Clear Console</button>
+            <button id="reset-btn" onclick="resetGame();">Reset Game</button>
+        </div>
+<hr>
+        <!-- Display the results -->
+        <small id="result" style="font-size: 20px;"></small><br>
+        <small id="result1"  style="font-size: 20px;"></small>
+
+        <!-- Footer note -->
+
+        <hr><hr>
+        <footer>
+            <p>Created by umesh | All rights reserved</p>
+        </footer>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
